@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leo Zeng</title>
+<meta name="description" content="Leo Zeng — independent high school researcher working on formal mathematics and autoformalization.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Leo Zeng</h1>
+    <p class="subtitle">Independent Researcher &middot; High School Senior</p>
+    <p class="tagline">Working on formal mathematics and autoformalization &mdash; teaching language models to turn ordinary mathematical writing into verified, machine-checkable proofs.</p>
+    <nav class="links">
+      <a href="#research">Research</a>
+      <a href="https://github.com/DaVinci12321" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:leozeng60@gmail.com">Email</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I'm a high school senior doing independent research at the intersection of large language
+      models and formal mathematics. I'm interested in <strong>autoformalization</strong> &mdash;
+      the automated translation of natural-language mathematical statements into formal languages
+      like Lean &mdash; and in understanding where and why current models are fragile, as a step
+      toward building more reliable systems for machine-checked mathematics.
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <article class="paper-card">
+      <h3>Lean Paraphrases: Analyzing the Effect of Wording on Autoformalization Output</h3>
+      <p class="byline">Leo Zeng</p>
+      <p class="abstract">
+        Recent research in autoformalization has placed less emphasis on the fact that Large
+        Language Models are sensitive to slight changes in the wording of problems. Our work
+        complements current research in this area by providing insight into the effects of
+        paraphrasing problems on statement autoformalization. We first manually create a dataset
+        of 50 paraphrased problem pairs, and manually check the outputs of model autoformalizations
+        for consistency with the original problem statement. We then extend this study with an
+        automated pipeline that generates and verifies 1000 additional paraphrase pairs drawn from
+        the FormalMATH benchmark, replacing manual correctness checking with a dual-LLM judge.
+        Across both the manual and automated studies, we find that slight rewordings have a
+        significant impact on the structure of the resulting outputs, even if those outputs are
+        accurate and consistent with the natural language problem statement, and that this
+        sensitivity persists at scale. We argue for the need for a system or intermediary language
+        in order to standardize the format of natural language problem statements, resulting in
+        more reliable model autoformalizations.
+      </p>
+      <div class="paper-links">
+        <a class="btn btn-primary" href="lean-paraphrases-paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+        <a class="btn" href="https://github.com/DaVinci12321/Lean_Paraphrases" target="_blank" rel="noopener">Code &amp; Data</a>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> Leo Zeng &middot; <a href="mailto:leozeng60@gmail.com">leozeng60@gmail.com</a> &middot; <a href="https://github.com/DaVinci12321" target="_blank" rel="noopener">github.com/DaVinci12321</a></p>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
